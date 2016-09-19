@@ -5,9 +5,8 @@ class CartController < ApplicationController
         cart = session[:cart]
       else
         session[:cart] = {}
-        cart = session[]:cart]
+        cart = session[:cart]
       end
-    end
 
       if cart[id] then
         cart[id] = cart[id] + 1
@@ -28,4 +27,5 @@ class CartController < ApplicationController
     else
       @cart = {}
   end
+end
 end
