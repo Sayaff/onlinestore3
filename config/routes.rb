@@ -2,9 +2,7 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  get '/cart' => 'cart#index'
-  get '/cart/clear' => 'cart#clear_cart'
-  get '/cart/:id' => 'cart#add'
+  resources :cart_items, only: [:index, :create, :destroy]
 
   resources :products
 
