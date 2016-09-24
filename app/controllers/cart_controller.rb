@@ -3,6 +3,7 @@ class CartController < ApplicationController
 before_action :authenticate_user!, except: [:index]
 
   def add
+
     id = params[:id]
       if session[:cart] then
         cart = session[:cart]
@@ -16,10 +17,11 @@ before_action :authenticate_user!, except: [:index]
       else
         cart[id] = 1
       end
+
     redirect_to :action => :index
   end
 
-  def clearCart
+  def clear_cart
     session[:cart] = nil
     redirect_to :action => :index
   end
@@ -29,6 +31,6 @@ before_action :authenticate_user!, except: [:index]
       @cart = session[:cart]
     else
       @cart = {}
+    end
   end
-end
 end
