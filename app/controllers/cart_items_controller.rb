@@ -1,5 +1,4 @@
 class CartItemsController < ApplicationController
-
   def index
     @cart_items = current_user.cart_items
   end
@@ -16,4 +15,13 @@ class CartItemsController < ApplicationController
     redirect_to action: :index
   end
 
+  def destroy
+    @cart_item = CartItem.find(params[:id])
+    if @cart_item.quantity > 1
+      @cart_item.update(quantity: @cart_item.quantity - 1)
+    else
+      @cart_item.destroy
+    end
+    redirect_to action: :index
+  end
 end
