@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161005190119) do
+ActiveRecord::Schema.define(version: 20161104134655) do
+
+  create_table "accessories", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.decimal  "price"
+    t.string   "manufacturer"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
 
   create_table "cart_items", force: :cascade do |t|
     t.integer  "user_id"
@@ -19,6 +28,37 @@ ActiveRecord::Schema.define(version: 20161005190119) do
     t.integer  "quantity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "fabrics", force: :cascade do |t|
+    t.string   "title"
+    t.string   "size"
+    t.string   "manufacturer"
+    t.string   "type"
+    t.string   "color"
+    t.text     "description"
+    t.decimal  "price"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "kits", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.string   "containment"
+    t.decimal  "price"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "patterns", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.string   "designer"
+    t.decimal  "price"
+    t.string   "category"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "products", force: :cascade do |t|
@@ -30,6 +70,16 @@ ActiveRecord::Schema.define(version: 20161005190119) do
     t.string   "subcategory"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "strands", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.decimal  "price"
+    t.string   "manufacturer"
+    t.string   "color"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "users", force: :cascade do |t|
