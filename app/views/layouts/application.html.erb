@@ -2,29 +2,59 @@
 <html>
 <head>
   <title>Onlinestore3</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'bootstrap.css', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'jquery.min.js', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'bootstrap.min.js', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <nav id='nav'>
-  <div id='page_nav'>
-      <%= link_to 'Home', root_path %>
-      <%= link_to 'Catalog', products_path %>
-      <%= link_to 'About', page_about_path %>
-      <%= link_to 'FAQ', page_faq_path %>
-      <%= link_to 'Contact', page_contact_path %>
-  </div>
-    <div id="sign_in">
-      <% if user_signed_in? %>
-        <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
-        <%= link_to 'My Cart', cart_items_path %>
-        <%= link_to 'My Account', edit_user_registration_path %>
-      <% else %>
-        <%= link_to 'Sign In', new_user_session_path %>
-        <%= link_to 'Sign Up', new_user_registration_path %>
-      <% end %>
-    </div>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <%= link_to 'Bonnechance Store', page_home_path, class: "navbar-brand" %>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <%= link_to 'About', page_about_path %>
+                    </li>
+                    <li>
+                        <%= link_to 'FAQ', page_faq_path %>
+                    </li>
+                    <li>
+                        <%= link_to 'Contact', page_contact_path %>
+                    </li>
+              <% if user_signed_in? %>
+                    <li id='account'>
+                      <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
+                    </li>
+                    <li id='account'>
+                      <%= link_to 'My Cart', cart_items_path %>
+                    </li>
+                    <li id='account'>
+                      <%= link_to 'My Account', edit_user_registration_path %>
+                    </li>
+                <% else %>
+                    <li id='account'>
+                      <%= link_to 'Sign In', new_user_session_path %>
+                    </li>
+                    <li id='account'>
+                      <%= link_to 'Sign Up', new_user_registration_path %>
+                    </li>
+                <% end %>
+                </ul>
+            </div>
+        </div>
     </nav>
 
 <div id="main_wrap"
