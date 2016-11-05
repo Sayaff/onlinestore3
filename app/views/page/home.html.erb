@@ -24,10 +24,8 @@
 
         <!-- Jumbotron Header -->
         <header class="jumbotron hero-spacer">
-            <h1>A Warm Welcome!</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam, eligendi, in quo sunt possimus non incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam repellat.</p>
-            <p><a class="btn btn-primary btn-large">Call to action!</a>
-            </p>
+            <h1>Welcome to Bonnechance store!</h1>
+            <p>Here you can find all you need for your beloved hobby</p>
         </header>
 
         <hr>
@@ -35,7 +33,7 @@
         <!-- Title -->
         <div class="row">
             <div class="col-lg-12">
-                <h3>Latest Features</h3>
+                <h3>Our goods</h3>
             </div>
         </div>
         <!-- /.row -->
@@ -45,12 +43,12 @@
 
             <div class="col-md-3 col-sm-6 hero-feature">
                 <div class="thumbnail">
-                    <img src="http://placehold.it/800x500" alt="">
+                    <img src="<%= image_path ("patterns.jpg") %>" alt="">
                     <div class="caption">
-                        <h3>Feature Label</h3>
+                        <h3>Patterns</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                         <p>
-                            <a href="#" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a>
+                            <%= link_to 'Catalog', patterns_path, :class => "btn btn-primary" %> <a href="#" class="btn btn-default">More Info</a>
                         </p>
                     </div>
                 </div>
@@ -58,12 +56,12 @@
 
             <div class="col-md-3 col-sm-6 hero-feature">
                 <div class="thumbnail">
-                    <img src="http://placehold.it/800x500" alt="">
+                    <img src="<%= image_path ("threads.jpg") %>" alt="">
                     <div class="caption">
-                        <h3>Feature Label</h3>
+                        <h3>Threads</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                         <p>
-                            <a href="#" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a>
+                            <%= link_to 'Catalog', strands_path, :class => "btn btn-primary" %> <a href="#" class="btn btn-default">More Info</a>
                         </p>
                     </div>
                 </div>
@@ -71,12 +69,12 @@
 
             <div class="col-md-3 col-sm-6 hero-feature">
                 <div class="thumbnail">
-                    <img src="http://placehold.it/800x500" alt="">
+                    <img src="<%= image_path ("fabric-selection.jpg") %>" alt="">
                     <div class="caption">
-                        <h3>Feature Label</h3>
+                        <h3>Fabrics</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                         <p>
-                            <a href="#" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a>
+                            <%= link_to 'Catalog', fabrics_path, :class => "btn btn-primary" %> <a href="#" class="btn btn-default">More Info</a>
                         </p>
                     </div>
                 </div>
@@ -84,18 +82,29 @@
 
             <div class="col-md-3 col-sm-6 hero-feature">
                 <div class="thumbnail">
-                    <img src="http://placehold.it/800x500" alt="">
+                      <img src="<%= image_path ("kits.jpg") %>" alt="">
                     <div class="caption">
-                        <h3>Feature Label</h3>
+                        <h3>Kits</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                         <p>
-                            <a href="#" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a>
+                            <%= link_to 'Catalog', kits_path, :class => "btn btn-primary" %> <a href="#" class="btn btn-default">More Info</a>
                         </p>
                     </div>
                 </div>
             </div>
 
-        </div>
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="<%= image_path ("accessories.jpg") %>" alt="">
+                    <div class="caption">
+                        <h3>Accessories</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <p>
+                            <%= link_to 'Catalog', accessories_path, :class => "btn btn-primary" %> <a href="#" class="btn btn-default">More Info</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
         <!-- /.row -->
 
         <hr>
@@ -104,7 +113,7 @@
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; Your Website 2014</p>
+                    <p>All rights reserved &copy; Kirill Shubin 2016</p>
                 </div>
             </div>
         </footer>

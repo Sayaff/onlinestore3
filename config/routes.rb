@@ -6,6 +6,16 @@ Rails.application.routes.draw do
 
   resources :cart_items, only: [:index, :create, :destroy]
 
+  resources :accessories
+
+  resources :fabrics
+
+  resources :kits
+
+  resources :patterns
+
+  resources :strands
+
   resources :products
 
   root 'page#home'
