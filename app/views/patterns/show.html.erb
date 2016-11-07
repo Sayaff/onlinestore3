@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @pattern.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @pattern.description %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @pattern.price %>
+</p>
+
+<p>
+  <strong>Designer:</strong>
+  <%= @pattern.designer %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @pattern.size %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @pattern.category %>
+</p>
+
+<%= link_to 'Edit', edit_pattern_path(@pattern) %> |
+<%= link_to 'Back', patterns_path %>

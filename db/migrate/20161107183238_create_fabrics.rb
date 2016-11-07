@@ -1,11 +1,11 @@
-class CreateStrands < ActiveRecord::Migration
+class CreateFabrics < ActiveRecord::Migration
   def change
-    create_table :strands do |t|
+    create_table :fabrics do |t|
       t.string :title
-      t.text :description
-      t.decimal :price
       t.string :manufacturer
       t.string :color
+      t.decimal :price
+      t.string :size
 
       t.timestamps null: false
     end

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @fabric.title %>
+</p>
+
+<p>
+  <strong>Manufacturer:</strong>
+  <%= @fabric.manufacturer %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @fabric.color %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @fabric.price %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @fabric.size %>
+</p>
+
+<%= link_to 'Edit', edit_fabric_path(@fabric) %> |
+<%= link_to 'Back', fabrics_path %>

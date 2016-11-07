@@ -2,18 +2,14 @@
 
 one:
   title: MyString
-  size: MyString
   manufacturer: MyString
-  type: 
   color: MyString
-  description: MyText
   price: 9.99
+  size: MyString
 
 two:
   title: MyString
-  size: MyString
   manufacturer: MyString
-  type: 
   color: MyString
-  description: MyText
   price: 9.99
+  size: MyString

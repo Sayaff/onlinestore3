@@ -2,12 +2,12 @@
 
 one:
   title: MyString
-  description: MyText
   containment: MyString
   price: 9.99
+  description: MyText
 
 two:
   title: MyString
-  description: MyText
   containment: MyString
   price: 9.99
+  description: MyText

@@ -1,10 +1,11 @@
-class CreateKits < ActiveRecord::Migration
+class CreateStrands < ActiveRecord::Migration
   def change
-    create_table :kits do |t|
+    create_table :strands do |t|
       t.string :title
       t.text :description
-      t.string :containment
       t.decimal :price
+      t.string :length
+      t.string :color
 
       t.timestamps null: false
     end

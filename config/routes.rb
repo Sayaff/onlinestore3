@@ -1,20 +1,15 @@
 Rails.application.routes.draw do
 
+  resources :accessories
+  resources :kits
+  resources :fabrics
+  resources :strands
+  resources :patterns
   devise_for :users
 
   resources :users
 
   resources :cart_items, only: [:index, :create, :destroy]
-
-  resources :accessories
-
-  resources :fabrics
-
-  resources :kits
-
-  resources :patterns
-
-  resources :strands
 
   resources :products
 

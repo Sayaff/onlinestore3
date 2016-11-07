@@ -1,1 +1,37 @@
-<h1>Patterns#index</h1>
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Patterns</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th>Designer</th>
+      <th>Size</th>
+      <th>Category</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @patterns.each do |pattern| %>
+      <tr>
+        <td><%= pattern.title %></td>
+        <td><%= pattern.description %></td>
+        <td><%= pattern.price %></td>
+        <td><%= pattern.designer %></td>
+        <td><%= pattern.size %></td>
+        <td><%= pattern.category %></td>
+        <td><%= link_to 'Show', pattern %></td>
+        <td><%= link_to 'Edit', edit_pattern_path(pattern) %></td>
+        <td><%= link_to 'Destroy', pattern, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pattern', new_pattern_path %>

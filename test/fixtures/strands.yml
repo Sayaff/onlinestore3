@@ -4,12 +4,12 @@ one:
   title: MyString
   description: MyText
   price: 9.99
-  manufacturer: MyString
+  length: MyString
   color: MyString
 
 two:
   title: MyString
   description: MyText
   price: 9.99
-  manufacturer: MyString
+  length: MyString
   color: MyString

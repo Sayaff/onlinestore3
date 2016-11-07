@@ -1,1 +1,35 @@
-<h1>Fabrics#index</h1>
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Fabrics</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Manufacturer</th>
+      <th>Color</th>
+      <th>Price</th>
+      <th>Size</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fabrics.each do |fabric| %>
+      <tr>
+        <td><%= fabric.title %></td>
+        <td><%= fabric.manufacturer %></td>
+        <td><%= fabric.color %></td>
+        <td><%= fabric.price %></td>
+        <td><%= fabric.size %></td>
+        <td><%= link_to 'Show', fabric %></td>
+        <td><%= link_to 'Edit', edit_fabric_path(fabric) %></td>
+        <td><%= link_to 'Destroy', fabric, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fabric', new_fabric_path %>

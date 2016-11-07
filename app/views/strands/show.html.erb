@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @strand.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @strand.description %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @strand.price %>
+</p>
+
+<p>
+  <strong>Length:</strong>
+  <%= @strand.length %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @strand.color %>
+</p>
+
+<%= link_to 'Edit', edit_strand_path(@strand) %> |
+<%= link_to 'Back', strands_path %>
