@@ -9,7 +9,11 @@ Rails.application.routes.draw do
 
   resources :users
 
-  resources :cart_items, only: [:index, :create, :destroy]
+  resources :cart_items, only: [:index, :create, :create_pattern, :destroy] do
+    member do
+        post 'create_pattern'
+    end
+  end
 
   resources :products
 
@@ -22,6 +26,7 @@ Rails.application.routes.draw do
   get 'page/faq'
 
   get 'page/contact'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

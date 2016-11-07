@@ -3,8 +3,8 @@ class CreateCartItems < ActiveRecord::Migration
     create_table :cart_items do |t|
       t.integer :user_id
       t.integer :product_id
+      t.integer :pattern_id
       t.integer :quantity
-
       t.timestamps null: false
     end
   end

@@ -15,6 +15,18 @@ class CartItemsController < ApplicationController
     redirect_to action: :index
   end
 
+  def create_pattern
+    pattern = Pattern.find(params[:id])
+    if current_user.cart_items.where(pattern_id: pattern.id).any?
+      cart_item = current_user.cart_items.find_by(pattern_id: pattern.id)
+      cart_item.update(quantity: cart_item.quantity + 1)
+    else
+      current_user.cart_items.create(pattern_id: pattern.id, quantity: 1)
+  end
+
+  redirect_to action: :index
+end
+
   def destroy
     @cart_item = CartItem.find(params[:id])
     if @cart_item.quantity > 1

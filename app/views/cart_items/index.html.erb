@@ -9,15 +9,18 @@
   <% total = 0 %>
 <ul>
   <% @cart_items.each do | cart_item | %>
-    <% product = Product.find(cart_item.product_id) %>
-    <% if product.present? %>
+    <% pattern = Pattern.find(cart_item.pattern_id) %>
+    <% if pattern.present? %>
       <li>
-        <%= link_to product.title, product %>
-        <p><%= product.description %></p>
-        <p><%= number_to_currency(product.price, :unit => '$') %></p>
+        <%= link_to pattern.title, pattern %>
+        <p><%= pattern.description %></p>
+        <p><%= number_to_currency(pattern.price, :unit => '$') %></p>
+        <p><%= pattern.designer %></p>
+        <p><%= pattern.size %></p>
+        <p><%= pattern.category %></p>
         <p>Quantity: <%= cart_item.quantity %></p>
       </li>
-        <% total += cart_item.quantity * product.price %>
+        <% total += cart_item.quantity * pattern.price %>
         <%= link_to 'Delete Item', cart_item_path(cart_item), method: :delete %>
     <% end %>
   <% end %>
