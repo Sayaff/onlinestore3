@@ -9,9 +9,16 @@ Rails.application.routes.draw do
 
   resources :users
 
-  resources :cart_items, only: [:index, :create, :create_pattern, :destroy] do
+  resources :cart_items, only: [:index, :create, :destroy] do
     member do
         post 'create_pattern'
+        post 'create_strand'
+        post 'create_fabric'
+        post 'create_kit'
+        post 'create_accessory'
+    end
+    collection do
+        get 'clear_cart'
     end
   end
 

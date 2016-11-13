@@ -25,6 +25,7 @@
         <td><%= link_to 'Show', strand %></td>
         <td><%= link_to 'Edit', edit_strand_path(strand) %></td>
         <td><%= link_to 'Destroy', strand, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Add to Cart', create_strand_cart_item_path(id: strand.id), method: 'POST' %></td>
       </tr>
     <% end %>
   </tbody>

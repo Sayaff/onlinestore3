@@ -23,6 +23,7 @@
         <td><%= link_to 'Show', kit %></td>
         <td><%= link_to 'Edit', edit_kit_path(kit) %></td>
         <td><%= link_to 'Destroy', kit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Add to Cart', create_kit_cart_item_path(id: kit.id), method: 'POST' %></td>
       </tr>
     <% end %>
   </tbody>

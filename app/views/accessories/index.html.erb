@@ -23,6 +23,7 @@
         <td><%= link_to 'Show', accessory %></td>
         <td><%= link_to 'Edit', edit_accessory_path(accessory) %></td>
         <td><%= link_to 'Destroy', accessory, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Add to Cart', create_accessory_cart_item_path(id: accessory.id), method: 'POST' %></td>
       </tr>
     <% end %>
   </tbody>
