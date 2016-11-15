@@ -5,6 +5,7 @@ class CreateKits < ActiveRecord::Migration
       t.string :containment
       t.decimal :price
       t.text :description
+      t.string :image_url
 
       t.timestamps null: false
     end

@@ -2,7 +2,7 @@
   <% if @cart_items.empty? %>
   <p>Your cart is currently empty</p>
   <% else %>
-    <%= link_to 'Clear Your Cart', clear_cart_cart_items_path(@cart_items) %> <!-- doesn't work, solve -->
+    <%= link_to 'Clear Your Cart', clear_cart_cart_items_path(@cart_items) %>
   <% end %>
   <br><br><br>
 
@@ -11,6 +11,7 @@
   <% @cart_items.each do | cart_item | %>
     <% if cart_item.product.present? %>
           <li>
+            <%= link_to cart_item.category %>
             <%= link_to cart_item.product.title, cart_item.product %>
             <p><%= number_to_currency(cart_item.product.price, :unit => '$') %></p>
             <p>Quantity: <%= cart_item.quantity %></p>
