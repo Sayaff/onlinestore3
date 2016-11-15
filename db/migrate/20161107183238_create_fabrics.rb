@@ -6,7 +6,6 @@ class CreateFabrics < ActiveRecord::Migration
       t.string :color
       t.decimal :price
       t.string :size
-      t.string :image_url
 
       t.timestamps null: false
     end

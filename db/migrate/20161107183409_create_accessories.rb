@@ -5,7 +5,6 @@ class CreateAccessories < ActiveRecord::Migration
       t.text :description
       t.decimal :price
       t.string :manufacturer
-      t.string :image_url
 
       t.timestamps null: false
     end

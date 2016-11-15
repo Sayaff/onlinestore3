@@ -11,15 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161107205429) do
+ActiveRecord::Schema.define(version: 20161115204353) do
 
   create_table "accessories", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
     t.decimal  "price"
     t.string   "manufacturer"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "cart_items", force: :cascade do |t|
@@ -40,8 +44,12 @@ ActiveRecord::Schema.define(version: 20161107205429) do
     t.string   "color"
     t.decimal  "price"
     t.string   "size"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "kits", force: :cascade do |t|
@@ -49,8 +57,12 @@ ActiveRecord::Schema.define(version: 20161107205429) do
     t.string   "containment"
     t.decimal  "price"
     t.text     "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "patterns", force: :cascade do |t|
@@ -60,8 +72,12 @@ ActiveRecord::Schema.define(version: 20161107205429) do
     t.string   "designer"
     t.string   "size"
     t.string   "category"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "products", force: :cascade do |t|
@@ -92,8 +108,12 @@ ActiveRecord::Schema.define(version: 20161107205429) do
     t.decimal  "price"
     t.string   "length"
     t.string   "color"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "users", force: :cascade do |t|

@@ -6,7 +6,6 @@ class CreateStrands < ActiveRecord::Migration
       t.decimal :price
       t.string :length
       t.string :color
-      t.string :image_url
 
       t.timestamps null: false
     end
