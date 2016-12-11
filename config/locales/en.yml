@@ -20,4 +20,49 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  currency: "$"
+  application:
+    navbar:
+      title: "Bonnechance store"
+      about: "About"
+      faq: "FAQ"
+      contact: "Contact Us"
+      sign_in: "Sign In"
+      sign_up: "Sign Up"
+      sign_out: "Sign Out"
+      my_account: "My account"
+      my_cart: "My Cart"
+  page:
+    about: "About Page"
+    faq: "Frequently Asked Questions"
+    contact: "Contact Us"
+    home:
+      title: "Welcome to Bonnechance store!"
+      subtitle: "Here you can find all you need for your beloved hobby"
+      catalog_header: "Our goods:"
+      catalog_pattern: "Patterns"
+      catalog_thread: "Threads"
+      catalog_fabric: "Fabrics"
+      catalog_kit: "Kits"
+      catalog_accessory: "Accessories"
+      catalog_button: "Catalog"
+  views:
+    common:
+      title: "Title:"
+      price: "Price:"
+      edit: "Edit"
+      back: "Back"
+      show: "Show"
+      destroy: "Destroy"
+      add_to_cart: "Add to Cart"
+      description: "Description:"
+      manufacturer: "Manufacturer:"
+    cart_items:
+      title: "Your Cart"
+      empty: "Your cart is currently empty"
+      clear: "Clear your cart"
+      delete: "Delete item"
+      total: "Total:"
+    accessories:
+      new: "New Accessory"
+      title: "Accessories"

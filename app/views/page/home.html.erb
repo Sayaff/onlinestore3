@@ -24,8 +24,8 @@
 
         <!-- Jumbotron Header -->
         <header class="jumbotron hero-spacer">
-            <h1>Welcome to Bonnechance store!</h1>
-            <p>Here you can find all you need for your beloved hobby</p>
+            <h1><%= t "page.home.title" %></h1>
+            <p><%= t "page.home.subtitle" %></p>
         </header>
 
         <hr>
@@ -33,7 +33,7 @@
         <!-- Title -->
         <div class="row">
             <div class="col-lg-12">
-                <h3>Our goods</h3>
+                <h3><%= t "page.home.catalog_header" %></h3>
             </div>
         </div>
         <!-- /.row -->
@@ -45,10 +45,10 @@
                 <div class="thumbnail">
                     <img src="<%= image_path ("patterns.jpg") %>" alt="">
                     <div class="caption">
-                        <h3>Patterns</h3>
+                        <h3><%= t "page.home.catalog_pattern" %></h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                         <p>
-                            <%= link_to 'Catalog', patterns_path, :class => "btn btn-primary" %> <a href="#" class="btn btn-default">More Info</a>
+                            <%= link_to t("page.home.catalog_button"), patterns_path, :class => "btn btn-primary" %> <a href="#" class="btn btn-default">More Info</a>
                         </p>
                     </div>
                 </div>
@@ -58,10 +58,10 @@
                 <div class="thumbnail">
                     <img src="<%= image_path ("threads.jpg") %>" alt="">
                     <div class="caption">
-                        <h3>Threads</h3>
+                        <h3><%= t "page.home.catalog_thread" %></h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                         <p>
-                            <%= link_to 'Catalog', strands_path, :class => "btn btn-primary" %> <a href="#" class="btn btn-default">More Info</a>
+                            <%= link_to t("page.home.catalog_button"), strands_path, :class => "btn btn-primary" %> <a href="#" class="btn btn-default">More Info</a>
                         </p>
                     </div>
                 </div>
@@ -71,10 +71,10 @@
                 <div class="thumbnail">
                     <img src="<%= image_path ("fabric-selection.jpg") %>" alt="">
                     <div class="caption">
-                        <h3>Fabrics</h3>
+                        <h3><%= t "page.home.catalog_fabric" %></h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                         <p>
-                            <%= link_to 'Catalog', fabrics_path, :class => "btn btn-primary" %> <a href="#" class="btn btn-default">More Info</a>
+                            <%= link_to t("page.home.catalog_button"), fabrics_path, :class => "btn btn-primary" %> <a href="#" class="btn btn-default">More Info</a>
                         </p>
                     </div>
                 </div>
@@ -84,10 +84,10 @@
                 <div class="thumbnail">
                       <img src="<%= image_path ("kits.jpg") %>" alt="">
                     <div class="caption">
-                        <h3>Kits</h3>
+                        <h3><%= t "page.home.catalog_kit" %></h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                         <p>
-                            <%= link_to 'Catalog', kits_path, :class => "btn btn-primary" %> <a href="#" class="btn btn-default">More Info</a>
+                            <%= link_to t("page.home.catalog_button"), kits_path, :class => "btn btn-primary" %> <a href="#" class="btn btn-default">More Info</a>
                         </p>
                     </div>
                 </div>
@@ -97,10 +97,10 @@
                 <div class="thumbnail">
                     <img src="<%= image_path ("accessories.jpg") %>" alt="">
                     <div class="caption">
-                        <h3>Accessories</h3>
+                        <h3><%= t "page.home.catalog_accessory" %></h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                         <p>
-                            <%= link_to 'Catalog', accessories_path, :class => "btn btn-primary" %> <a href="#" class="btn btn-default">More Info</a>
+                            <%= link_to t("page.home.catalog_button"), accessories_path, :class => "btn btn-primary" %> <a href="#" class="btn btn-default">More Info</a>
                         </p>
                     </div>
                 </div>

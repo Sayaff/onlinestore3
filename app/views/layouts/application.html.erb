@@ -20,38 +20,44 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <%= link_to 'Bonnechance Store', page_home_path, class: "navbar-brand" %>
+                <%= link_to t("application.navbar.title"), page_home_path, class: "navbar-brand" %>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <%= link_to 'About', page_about_path %>
+                        <%= link_to t("application.navbar.about"), page_about_path %>
                     </li>
                     <li>
-                        <%= link_to 'FAQ', page_faq_path %>
+                        <%= link_to t("application.navbar.faq"), page_faq_path %>
                     </li>
                     <li>
-                        <%= link_to 'Contact', page_contact_path %>
+                        <%= link_to t("application.navbar.contact"), page_contact_path %>
                     </li>
               <% if user_signed_in? %>
                     <li id='account'>
-                      <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
+                      <%= link_to t("application.navbar.sign_out"), destroy_user_session_path, method: :delete %>
                     </li>
                     <li id='account'>
-                      <%= link_to 'My Cart', cart_items_path %>
+                      <%= link_to t("application.navbar.my_cart"), cart_items_path %>
                     </li>
                     <li id='account'>
-                      <%= link_to 'My Account', edit_user_registration_path %>
+                      <%= link_to t("application.navbar.my_account"), edit_user_registration_path %>
                     </li>
                 <% else %>
                     <li id='account'>
-                      <%= link_to 'Sign In', new_user_session_path %>
+                      <%= link_to t("application.navbar.sign_in"), new_user_session_path %>
                     </li>
                     <li id='account'>
-                      <%= link_to 'Sign Up', new_user_registration_path %>
+                      <%= link_to t("application.navbar.sign_up"), new_user_registration_path %>
                     </li>
                 <% end %>
+                    <li>
+                      <%= link_to_unless_current "English", locale: "en" %>
+                    </li>
+                    <li>
+                      <%= link_to_unless_current "Русский", locale: "ru" %>
+                    </li>
                 </ul>
             </div>
         </div>

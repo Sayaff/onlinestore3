@@ -193,6 +193,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   devise
   haml (~> 4.0.7)
+  i18n
   jbuilder (~> 2.0)
   jquery-rails
   paperclip

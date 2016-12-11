@@ -1,8 +1,8 @@
-<h1>Your Cart</h1>
+<h1><%= t "views.cart_items.title" %></h1>
   <% if @cart_items.empty? %>
-  <p>Your cart is currently empty</p>
+  <p><%= t "views.cart_items.empty" %></p>
   <% else %>
-    <%= link_to 'Clear Your Cart', clear_cart_cart_items_path(@cart_items) %>
+    <%= link_to t("views.cart_items.clear"), clear_cart_cart_items_path(@cart_items) %>
   <% end %>
   <br><br><br>
 
@@ -13,13 +13,13 @@
           <li>
             <%= link_to cart_item.category %>
             <%= link_to cart_item.product.title, cart_item.product %>
-            <p><%= number_to_currency(cart_item.product.price, :unit => '$') %></p>
+            <p><%= number_to_currency(cart_item.product.price, :unit => '$') %></p> <!-- think about currency conversion USD-RUR, if required --> 
             <p>Quantity: <%= cart_item.quantity %></p>
           </li>
           <% total += cart_item.quantity * cart_item.product.price %>
-          <%= link_to 'Delete Item', cart_item_path(cart_item), method: :delete %>
+          <%= link_to t("views.cart_items.delete"), cart_item_path(cart_item), method: :delete %>
     <% end %>
   <% end %>
 
-    <p><b>Total: <%= number_to_currency(total, :unit => '$') %></b></p>
+    <p><b><%= t "views.cart_items.total" %> <%= number_to_currency(total, :unit => '$') %></b></p>
 </ul>

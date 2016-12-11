@@ -1,0 +1,46 @@
+ru:
+  application:
+    navbar:
+      title: "Магазин Bonnechance"
+      about: "О нас"
+      faq: "ЧАВО"
+      contact: "Контакты"
+      sign_in: "Логин"
+      sign_up: "Регистрация"
+      sign_out: "Выйти"
+      my_account: "Мой аккаунт"
+      my_cart: "Моя корзина"
+  page:
+    about: "О нас"
+    faq: "ЧАсто задаваемые ВОпросы"
+    contact: "Контакты"
+    home:
+      title: "Добро пожаловать в магазин Bonnechance!"
+      subtitle: "Здесь Вы найдёте всё для Вашего любимого хобби"
+      catalog_header: "Наши товары:"
+      catalog_pattern: "Схемы"
+      catalog_thread: "Нитки"
+      catalog_fabric: "Ткани"
+      catalog_kit: "Наборы"
+      catalog_accessory: "Аксессуары"
+      catalog_button: "Каталог"
+  views:
+    common:
+      title: "Наименование:"
+      price: "Цена:"
+      edit: "Редактировать"
+      back: "Назад"
+      show: "Показать"
+      destroy: "Удалить"
+      add_to_cart: "Добавить в корзину"
+      description: "Описание:"
+      manufacturer: "Производитель:"
+    cart_items:
+      title: "Моя корзина"
+      empty: "Ваша корзина пуста"
+      clear: "Очистить корзину"
+      delete: "Удалить товар"
+      total: "Итого:"
+    accessories:
+      new: "Новый аксессуар"
+      title: "Аксессуары"

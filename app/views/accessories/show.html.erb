@@ -1,24 +1,24 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
+  <strong><%= t "views.common.title" %> </strong>
   <%= @accessory.title %>
 </p>
 
 <p>
-  <strong>Description:</strong>
+  <strong><%= t "views.common.description" %></strong>
   <%= @accessory.description %>
 </p>
 
 <p>
-  <strong>Price:</strong>
+  <strong><%= t "views.common.price" %></strong>
   <%= @accessory.price %>
 </p>
 
 <p>
-  <strong>Manufacturer:</strong>
+  <strong><%= t "views.common.manufacturer" %></strong>
   <%= @accessory.manufacturer %>
 </p>
 
-<%= link_to 'Edit', edit_accessory_path(@accessory) %> |
-<%= link_to 'Back', accessories_path %>
+<%= link_to t("views.common.edit"), edit_accessory_path(@accessory) %> |
+<%= link_to t("views.common.back"), accessories_path %>

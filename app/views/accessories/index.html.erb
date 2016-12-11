@@ -1,14 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Accessories</h1>
+<h1><%= t "views.accessories.title" %></h1>
 
 <table>
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Price</th>
-      <th>Manufacturer</th>
+      <th><%= t "views.common.title" %></th>
+      <th><%= t "views.common.description" %></th>
+      <th><%= t "views.common.price" %></th>
+      <th><%= t "views.common.manufacturer" %></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -20,10 +20,10 @@
         <td><%= accessory.description %></td>
         <td><%= accessory.price %></td>
         <td><%= accessory.manufacturer %></td>
-        <td><%= link_to 'Show', accessory %></td>
-        <td><%= link_to 'Edit', edit_accessory_path(accessory) %></td>
-        <td><%= link_to 'Destroy', accessory, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <td><%= link_to 'Add to Cart', create_accessory_cart_item_path(id: accessory.id), method: 'POST' %></td>
+        <td><%= link_to t("views.common.show"), accessory %></td>
+        <td><%= link_to t("views.common.edit"), edit_accessory_path(accessory) %></td>
+        <td><%= link_to t("views.common.destroy"), accessory, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to t("views.common.add_to_cart"), create_accessory_cart_item_path(id: accessory.id), method: 'POST' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -31,4 +31,4 @@
 
 <br>
 
-<%= link_to 'New Accessory', new_accessory_path %>
+<%= link_to t("views.accessories.new"), new_accessory_path %>
