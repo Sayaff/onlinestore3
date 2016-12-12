@@ -20,10 +20,16 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  currency: "$"
+  activerecord:
+    attributes:
+      accessory:
+        title: "Title:"
+        price: "Price:"
+        description: "Description:"
+        manufacturer: "Manufacturer:"
   application:
     navbar:
-      title: "Bonnechance store"
+      title: "Bonnechanse store"
       about: "About"
       faq: "FAQ"
       contact: "Contact Us"
@@ -37,7 +43,7 @@ en:
     faq: "Frequently Asked Questions"
     contact: "Contact Us"
     home:
-      title: "Welcome to Bonnechance store!"
+      title: "Welcome to Bonnechanse store!"
       subtitle: "Here you can find all you need for your beloved hobby"
       catalog_header: "Our goods:"
       catalog_pattern: "Patterns"

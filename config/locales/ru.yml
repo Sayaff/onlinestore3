@@ -1,7 +1,14 @@
 ru:
+  activerecord:
+    attributes:
+      accessory:
+        title: "Наименование"
+        price: "Цена"
+        description: "Описание"
+        manufacturer: "Производитель"
   application:
     navbar:
-      title: "Магазин Bonnechance"
+      title: "Магазин Bonnechanse"
       about: "О нас"
       faq: "ЧАВО"
       contact: "Контакты"
@@ -15,7 +22,7 @@ ru:
     faq: "ЧАсто задаваемые ВОпросы"
     contact: "Контакты"
     home:
-      title: "Добро пожаловать в магазин Bonnechance!"
+      title: "Добро пожаловать в магазин Bonnechanse!"
       subtitle: "Здесь Вы найдёте всё для Вашего любимого хобби"
       catalog_header: "Наши товары:"
       catalog_pattern: "Схемы"
