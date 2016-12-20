@@ -3,7 +3,8 @@ class CreateStrands < ActiveRecord::Migration
     create_table :strands do |t|
       t.string :title
       t.text :description
-      t.decimal :price
+      t.decimal :price_usd
+      t.decimal :price_rub
       t.string :length
       t.string :color
 

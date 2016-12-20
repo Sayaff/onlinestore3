@@ -18,7 +18,11 @@
       <tr>
         <td><%= kit.title %></td>
         <td><%= kit.containment %></td>
-        <td><%= kit.price %></td>
+        <% if session[:currency] == "RUB" %>
+        <td><%= kit.price_rub %></td>
+        <% else %>
+        <td><%= kit.price_usd %></td>
+        <% end %>
         <td><%= kit.description %></td>
         <td><%= link_to 'Show', kit %></td>
         <td><%= link_to 'Edit', edit_kit_path(kit) %></td>

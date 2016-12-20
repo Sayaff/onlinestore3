@@ -13,13 +13,24 @@
           <li>
             <%= link_to cart_item.category %>
             <%= link_to cart_item.product.title, cart_item.product %>
-            <p><%= number_to_currency(cart_item.product.price, :unit => '$') %></p> 
+            <% if session[:currency] == "RUB" %>
+            <p><%= number_to_currency(cart_item.product.price_rub, :unit => '₽') %></p>
+            <% else %>
+            <p><%= number_to_currency(cart_item.product.price_usd, :unit => '$') %></p>
+            <% end %>
             <p>Quantity: <%= cart_item.quantity %></p>
           </li>
-          <% total += cart_item.quantity * cart_item.product.price %>
+          <% if session[:currency] == "RUB" %>
+          <% total += cart_item.quantity * cart_item.product.price_rub %>
+          <% else %>
+          <% total += cart_item.quantity * cart_item.product.price_usd %>
+          <% end %>
           <%= link_to t("views.cart_items.delete"), cart_item_path(cart_item), method: :delete %>
     <% end %>
   <% end %>
-
+    <% if session[:currency] == "RUB" %>
+    <p><b><%= t "views.cart_items.total" %> <%= number_to_currency(total, :unit => '₽') %></b></p>
+    <% else %>
     <p><b><%= t "views.cart_items.total" %> <%= number_to_currency(total, :unit => '$') %></b></p>
+    <% end %>
 </ul>

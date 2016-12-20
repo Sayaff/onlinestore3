@@ -10,10 +10,17 @@
   <%= @strand.description %>
 </p>
 
+<% if session[:currency] == "RUB" %>
 <p>
-  <strong>Price:</strong>
-  <%= @strand.price %>
+  <strong><%= t "views.common.price" %></strong>
+  <%= @strand.price_rub %>
 </p>
+<% else %>
+<p>
+  <strong><%= t "views.common.price" %></strong>
+  <%= @strand.price_usd %>
+</p>
+<% end %>
 
 <p>
   <strong>Length:</strong>

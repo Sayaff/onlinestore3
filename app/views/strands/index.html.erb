@@ -19,7 +19,11 @@
       <tr>
         <td><%= strand.title %></td>
         <td><%= strand.description %></td>
-        <td><%= strand.price %></td>
+        <% if session[:currency] == "RUB" %>
+        <td><%= strand.price_rub %></td>
+        <% else %>
+        <td><%= strand.price_usd %></td>
+        <% end %>
         <td><%= strand.length %></td>
         <td><%= strand.color %></td>
         <td><%= link_to 'Show', strand %></td>

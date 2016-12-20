@@ -10,10 +10,17 @@
   <%= @kit.containment %>
 </p>
 
+<% if session[:currency] == "RUB" %>
 <p>
-  <strong>Price:</strong>
-  <%= @kit.price %>
+  <strong><%= t "views.common.price" %></strong>
+  <%= @kit.price_rub %>
 </p>
+<% else %>
+<p>
+  <strong><%= t "views.common.price" %></strong>
+  <%= @kit.price_usd %>
+</p>
+<% end %>
 
 <p>
   <strong>Description:</strong>

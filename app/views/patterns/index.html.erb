@@ -21,7 +21,11 @@
         <td><%= pattern.title %></td>
         <td><%= pattern.description %></td>
         <td><%= image_tag pattern.image.url(:medium)%></td>
-        <td><%= pattern.price %></td>
+        <% if session[:currency] == "RUB" %>
+        <td><%= pattern.price_rub %></td>
+        <% else %>
+        <td><%= pattern.price_usd %></td>
+        <% end %>
         <td><%= pattern.designer %></td>
         <td><%= pattern.size %></td>
         <td><%= pattern.category %></td>

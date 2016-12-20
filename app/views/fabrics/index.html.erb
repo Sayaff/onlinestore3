@@ -20,7 +20,11 @@
         <td><%= fabric.title %></td>
         <td><%= fabric.manufacturer %></td>
         <td><%= fabric.color %></td>
-        <td><%= fabric.price %></td>
+        <% if session[:currency] == "RUB" %>
+        <td><%= fabric.price_rub %></td>
+        <% else %>
+        <td><%= fabric.price_usd %></td>
+        <% end %>
         <td><%= fabric.size %></td>
         <td><%= link_to 'Show', fabric %></td>
         <td><%= link_to 'Edit', edit_fabric_path(fabric) %></td>

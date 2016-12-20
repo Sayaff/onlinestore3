@@ -14,7 +14,6 @@ class FabricsController < ApplicationController
 
   # GET /fabrics/new
   def new
-    binding.pry
     session[:currency] = "usd"
     @fabric = Fabric.new
   end
@@ -71,6 +70,6 @@ class FabricsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def fabric_params
-      params.require(:fabric).permit(:title, :manufacturer, :color, :price, :size)
+      params.require(:fabric).permit(:title, :manufacturer, :color, :price_usd, :price_rub, :size)
     end
 end

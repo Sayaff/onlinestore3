@@ -10,10 +10,17 @@
   <%= @accessory.description %>
 </p>
 
+<% if session[:currency] == "RUB" %>
 <p>
   <strong><%= t "views.common.price" %></strong>
-  <%= @accessory.price %>
+  <%= @accessory.price_rub %>
 </p>
+<% else %>
+<p>
+  <strong><%= t "views.common.price" %></strong>
+  <%= @accessory.price_usd %>
+</p>
+<% end %>
 
 <p>
   <strong><%= t "views.common.manufacturer" %></strong>

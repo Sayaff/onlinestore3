@@ -3,7 +3,8 @@ class CreateKits < ActiveRecord::Migration
     create_table :kits do |t|
       t.string :title
       t.string :containment
-      t.decimal :price
+      t.decimal :price_usd
+      t.decimal :price_rub
       t.text :description
 
       t.timestamps null: false

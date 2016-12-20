@@ -3,7 +3,8 @@ class CreatePatterns < ActiveRecord::Migration
     create_table :patterns do |t|
       t.string :title
       t.text :description
-      t.decimal :price
+      t.decimal :price_usd
+      t.decimal :price_rub
       t.string :designer
       t.string :size
       t.string :category

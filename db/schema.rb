@@ -16,7 +16,8 @@ ActiveRecord::Schema.define(version: 20161115204353) do
   create_table "accessories", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
-    t.decimal  "price"
+    t.decimal  "price_usd"
+    t.decimal  "price_rub"
     t.string   "manufacturer"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
@@ -42,7 +43,8 @@ ActiveRecord::Schema.define(version: 20161115204353) do
     t.string   "title"
     t.string   "manufacturer"
     t.string   "color"
-    t.decimal  "price"
+    t.decimal  "price_usd"
+    t.decimal  "price_rub"
     t.string   "size"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
@@ -55,7 +57,8 @@ ActiveRecord::Schema.define(version: 20161115204353) do
   create_table "kits", force: :cascade do |t|
     t.string   "title"
     t.string   "containment"
-    t.decimal  "price"
+    t.decimal  "price_usd"
+    t.decimal  "price_rub"
     t.text     "description"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
@@ -68,7 +71,8 @@ ActiveRecord::Schema.define(version: 20161115204353) do
   create_table "patterns", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
-    t.decimal  "price"
+    t.decimal  "price_usd"
+    t.decimal  "price_rub"
     t.string   "designer"
     t.string   "size"
     t.string   "category"
@@ -84,7 +88,8 @@ ActiveRecord::Schema.define(version: 20161115204353) do
     t.string   "title"
     t.text     "description"
     t.string   "image_url"
-    t.decimal  "price"
+    t.decimal  "price_usd"
+    t.decimal  "price_rub"
     t.string   "category"
     t.string   "subcategory"
     t.datetime "created_at",  null: false
@@ -94,7 +99,8 @@ ActiveRecord::Schema.define(version: 20161115204353) do
   create_table "schemes", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
-    t.decimal  "price"
+    t.decimal  "price_usd"
+    t.decimal  "price_rub"
     t.string   "designer"
     t.string   "size"
     t.string   "category"
@@ -105,7 +111,8 @@ ActiveRecord::Schema.define(version: 20161115204353) do
   create_table "strands", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
-    t.decimal  "price"
+    t.decimal  "price_usd"
+    t.decimal  "price_rub"
     t.string   "length"
     t.string   "color"
     t.datetime "created_at",         null: false

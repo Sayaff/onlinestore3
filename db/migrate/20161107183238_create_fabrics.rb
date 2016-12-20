@@ -4,7 +4,8 @@ class CreateFabrics < ActiveRecord::Migration
       t.string :title
       t.string :manufacturer
       t.string :color
-      t.decimal :price
+      t.decimal :price_usd
+      t.decimal :price_rub
       t.string :size
 
       t.timestamps null: false

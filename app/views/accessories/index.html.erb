@@ -18,7 +18,11 @@
       <tr>
         <td><%= accessory.title %></td>
         <td><%= accessory.description %></td>
-        <td><%= accessory.price %></td>
+        <% if session[:currency] == "RUB" %>
+        <td><%= accessory.price_rub %></td>
+        <% else %>
+        <td><%= accessory.price_usd %></td>
+        <% end %>
         <td><%= accessory.manufacturer %></td>
         <td><%= link_to t("views.common.show"), accessory %></td>
         <td><%= link_to t("views.common.edit"), edit_accessory_path(accessory) %></td>

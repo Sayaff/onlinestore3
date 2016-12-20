@@ -15,10 +15,17 @@
   <%= @fabric.color %>
 </p>
 
+<% if session[:currency] == "RUB" %>
 <p>
-  <strong>Price:</strong>
-  <%= @fabric.price %>
+  <strong><%= t "views.common.price" %></strong>
+  <%= @fabric.price_rub %>
 </p>
+<% else %>
+<p>
+  <strong><%= t "views.common.price" %></strong>
+  <%= @fabric.price_usd %>
+</p>
+<% end %>
 
 <p>
   <strong>Size:</strong>
