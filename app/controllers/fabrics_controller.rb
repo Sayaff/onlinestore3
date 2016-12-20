@@ -14,6 +14,8 @@ class FabricsController < ApplicationController
 
   # GET /fabrics/new
   def new
+    binding.pry
+    session[:currency] = "usd"
     @fabric = Fabric.new
   end
 

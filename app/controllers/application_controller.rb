@@ -7,6 +7,11 @@ class ApplicationController < ActionController::Base
 
   before_filter :set_locale
 
+    def set_currency
+      session[:currency] = params[:currency]
+      redirect_to :back
+    end
+
   private
 
     def set_locale

@@ -58,10 +58,22 @@
                     <li>
                       <%= link_to_unless_current "Русский", locale: "ru" %>
                     </li>
+                    <li>
+                      <%= link_to "RUB", set_currency_path(currency: "RUB") %>
+                    </li>
+                    <li>
+                      <%= link_to "USD", set_currency_path(currency: "USD") %>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
+    <!-- example below. later delete -->
+<% if session[:currency] == "RUB" %>
+<p>1</p>
+<% else %>
+<p>2</p>
+<% end %>
 
 <div id="main_wrap"
   <p class='notice'><%= notice %></p>
