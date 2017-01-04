@@ -8,6 +8,8 @@ ru:
         manufacturer: "Производитель"
   application:
     navbar:
+      currency_usd: "Ваша валюта - Доллар"
+      currency_rub: "Ваша валюта - Рубль"
       title: "Магазин Bonnechanse"
       about: "О нас"
       faq: "ЧАВО"
@@ -48,6 +50,14 @@ ru:
       clear: "Очистить корзину"
       delete: "Удалить товар"
       total: "Итого:"
+      quantity: "Количество:"
     accessories:
       new: "Новый аксессуар"
       title: "Аксессуары"
+  models:
+    cart_items:
+      pattern: "Схема: "
+      thread: "Нитки: "
+      fabric: "Ткань: "
+      kit: "Набор: "
+      accessory: "Аксессуар: "

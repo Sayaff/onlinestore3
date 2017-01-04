@@ -70,9 +70,9 @@
     </nav>
     <!-- example below. beautify later-->
 <% if session[:currency] == "RUB" %>
-<p><strong>Your currency is RUB</strong></p>
+<p><strong><%= t "application.navbar.currency_rub" %></strong></p>
 <% else %>
-<p><strong>Your currency is USD</strong></p>
+<p><strong><%= t "application.navbar.currency_usd" %></strong></p>
 <% end %>
 
 <div id="main_wrap"

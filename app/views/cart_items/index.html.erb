@@ -18,7 +18,7 @@
             <% else %>
             <p><%= number_to_currency(cart_item.product.price_usd, :unit => '$') %></p>
             <% end %>
-            <p>Quantity: <%= cart_item.quantity %></p>
+            <p><%= t "views.cart_items.quantity" %> <%= cart_item.quantity %></p>
           </li>
           <% if session[:currency] == "RUB" %>
           <% total += cart_item.quantity * cart_item.product.price_rub %>

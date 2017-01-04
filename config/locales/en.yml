@@ -29,6 +29,8 @@ en:
         manufacturer: "Manufacturer:"
   application:
     navbar:
+      currency_usd: "Your currency is USD"
+      currency_rub: "Your currency is RUB"
       title: "Bonnechanse store"
       about: "About"
       faq: "FAQ"
@@ -69,6 +71,14 @@ en:
       clear: "Clear your cart"
       delete: "Delete item"
       total: "Total:"
+      quantity: "Quantity:"
     accessories:
       new: "New Accessory"
       title: "Accessories"
+  models:
+    cart_items:
+      pattern: "Pattern: "
+      thread: "Thread: "
+      fabric: "Fabric: "
+      kit: "Kit: "
+      accessory: "Accessory: "
