@@ -18,6 +18,7 @@
       <tr>
         <td><%= accessory.title %></td>
         <td><%= accessory.description %></td>
+        <td><%= image_tag accessory.image.url(:medium)%></td>
         <% if session[:currency] == "RUB" %>
         <td><%= accessory.price_rub %></td>
         <% else %>

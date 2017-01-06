@@ -19,6 +19,7 @@
       <tr>
         <td><%= strand.title %></td>
         <td><%= strand.description %></td>
+        <td><%= image_tag strand.image.url(:medium)%></td>
         <% if session[:currency] == "RUB" %>
         <td><%= strand.price_rub %></td>
         <% else %>

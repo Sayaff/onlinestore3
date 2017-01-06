@@ -18,6 +18,7 @@
       <tr>
         <td><%= kit.title %></td>
         <td><%= kit.containment %></td>
+        <td><%= image_tag kit.image.url(:medium)%></td>
         <% if session[:currency] == "RUB" %>
         <td><%= kit.price_rub %></td>
         <% else %>

@@ -69,6 +69,6 @@ class KitsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def kit_params
-      params.require(:kit).permit(:title, :containment, :price_usd, :price_rub, :description)
+      params.require(:kit).permit(:title, :containment, :price_usd, :price_rub, :description, :image)
     end
 end
