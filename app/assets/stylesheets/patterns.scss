@@ -1,3 +1,35 @@
 // Place all the styles related to the Patterns controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+.hero-spacer {
+    margin-top: 50px;
+}
+
+.hero-feature {
+    margin-bottom: 30px;
+}
+
+footer {
+    margin: 50px 0;
+}
+
+.panel {
+	margin: 10px;
+	border-radius: 7px;
+	text-align: center;
+  display: inline;
+
+  img {
+    max-width: 100%;
+    height: auto;
+
+  }
+}
+
+.new-pattern {
+  clear: both;
+}
