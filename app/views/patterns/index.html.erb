@@ -66,22 +66,24 @@
   </ul>
           <div class="row">
             <% @patterns.each do |pattern| %>
-              <div class="panel panel-default col-md-3">
-                  <img src="<%= image_path pattern.image.url(:medium) %>" alt="">
-                  <div class="panel-body">
-                      <h3><%= pattern.title %></h3>
-                      <% if session[:currency] == "RUB" %>
-                        <p><%= number_to_currency(pattern.price_rub, :unit => '₽') %></p>
-                      <% else %>
-                        <p><%= number_to_currency(pattern.price_usd, :unit => '$') %></p>
-                      <% end %>
+              <div class="col-sm-offset-1">
+                <div class="panel panel-default col-sm-3">
+                    <img src="<%= image_path pattern.image.url(:medium) %>" alt="">
+                    <div class="panel-body">
+                        <h3><%= pattern.title %></h3>
+                        <% if session[:currency] == "RUB" %>
+                          <p><%= number_to_currency(pattern.price_rub, :unit => '₽') %></p>
+                        <% else %>
+                          <p><%= number_to_currency(pattern.price_usd, :unit => '$') %></p>
+                        <% end %>
 
-                        <%= link_to 'Show', pattern, :class => "btn btn-info" %> <%= link_to 'Add to Cart', create_pattern_cart_item_path(id: pattern.id), method: 'POST', :class => "btn btn-success" %>
-                          <% if current_user.admin? %>
-                            <%= link_to 'Edit', edit_pattern_path(pattern), :class => "btn btn-info" %> <%= link_to 'Delete', pattern, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger" %>
-                          <% end %>
-                </div>
+                          <%= link_to 'Show', pattern, :class => "btn btn-info" %> <%= link_to 'Add to Cart', create_pattern_cart_item_path(id: pattern.id), method: 'POST', :class => "btn btn-success" %>
+                            <% if current_user.admin? %>
+                              <%= link_to 'Edit', edit_pattern_path(pattern), :class => "btn btn-info" %> <%= link_to 'Delete', pattern, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger" %>
+                            <% end %>
+                  </div>
             </div>
+          </div>
           <% end %>
         </div>
     </div>
@@ -91,4 +93,5 @@
       <%= link_to 'New Pattern', new_pattern_path, :class => "btn btn-primary" %>
     </div>
   <% end %>
+</div>
 </body>
