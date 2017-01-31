@@ -26,19 +26,55 @@
     <header class="jumbotron hero-spacer">
       <h1>Patterns Catalog</h1>
     </header>
-
-    <hr>
-        <div class="row">
-          <% @patterns.each do |pattern| %>
-            <div class="panel panel-default col-md-3">
-                <img src="<%= image_path pattern.image.url(:medium) %>" alt="">
-                <div class="panel-body">
-                    <h3><%= pattern.title %></h3>
-                    <% if session[:currency] == "RUB" %>
-                    <p><%= number_to_currency(pattern.price_rub, :unit => '₽') %></p>
-                    <% else %>
-                    <p><%= number_to_currency(pattern.price_usd, :unit => '$') %></p>
-                    <% end %>
+      <div class= "filter">
+        <ul class="nav nav-tabs">
+          <li role="presentation" class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+              Sort by: <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+            </ul>
+          </li>
+        </ul>
+      </div>
+    <div class= "catalog navbar">
+      <ul class="nav nav-tabs">
+        <li role="presentation" class="active"><a href="#">All</a></li>
+        <li role="presentation"><a href="#">New</a></li>
+        <li role="presentation"><a href="#">Top Rated</a></li>
+        <li role="presentation" class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            Category <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+          </ul>
+        </li>
+      <li role="presentation" class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+          Author <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+        </ul>
+      </li>
+    <li role="presentation" class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+        Size <span class="caret"></span>
+      </a>
+      <ul class="dropdown-menu">
+      </ul>
+    </li>
+  </ul>
+          <div class="row">
+            <% @patterns.each do |pattern| %>
+              <div class="panel panel-default col-md-3">
+                  <img src="<%= image_path pattern.image.url(:medium) %>" alt="">
+                  <div class="panel-body">
+                      <h3><%= pattern.title %></h3>
+                      <% if session[:currency] == "RUB" %>
+                        <p><%= number_to_currency(pattern.price_rub, :unit => '₽') %></p>
+                      <% else %>
+                        <p><%= number_to_currency(pattern.price_usd, :unit => '$') %></p>
+                      <% end %>
 
                         <%= link_to 'Show', pattern, :class => "btn btn-info" %> <%= link_to 'Add to Cart', create_pattern_cart_item_path(id: pattern.id), method: 'POST', :class => "btn btn-success" %>
                           <% if current_user.admin? %>
