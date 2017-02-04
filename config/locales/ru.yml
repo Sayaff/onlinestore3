@@ -39,11 +39,22 @@ ru:
       price: "Цена:"
       edit: "Редактировать"
       back: "Назад"
-      show: "Показать"
+      show: "Подробнее"
       destroy: "Удалить"
       add_to_cart: "Добавить в корзину"
       description: "Описание:"
       manufacturer: "Производитель:"
+    filters:
+      sort_by: "Сортировать по:"
+      new: "Новые"
+      all: "Все"
+      top_rated: "По рейтингу"
+      category: "Категория"
+      author: "Автор"
+      size: "Размер"
+    patterns:
+      header: "Каталог схем"
+      new: "Новая схема"
     cart_items:
       title: "Моя корзина"
       empty: "Ваша корзина пуста"

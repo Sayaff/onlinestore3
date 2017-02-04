@@ -65,6 +65,17 @@ en:
       add_to_cart: "Add to Cart"
       description: "Description:"
       manufacturer: "Manufacturer:"
+    filters:
+      sort_by: "Sort by"
+      all: "All"
+      new: "New"
+      top_rated: "Top rated"
+      category: "Category"
+      author: "Author"
+      size: "Size"
+    patterns:
+      header: "Patterns catalog"
+      new: "New pattern"
     cart_items:
       title: "Your Cart"
       empty: "Your cart is currently empty"

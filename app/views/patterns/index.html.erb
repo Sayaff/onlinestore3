@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Patterns Catalog</title>
+    <title><%= t "views.patterns.header" %></title>
 
     <!-- Custom CSS -->
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -24,13 +24,13 @@
   <div class="container">
 
     <header class="jumbotron hero-spacer">
-      <h1>Patterns Catalog</h1>
+      <h1><%= t "views.patterns.header" %></h1>
     </header>
       <div class= "filter">
         <ul class="nav nav-tabs">
           <li role="presentation" class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-              Sort by: <span class="caret"></span>
+              <%= t "views.filters.sort_by" %> <span class="caret"></span>
             </a>
             <ul class="dropdown-menu">
             </ul>
@@ -39,26 +39,26 @@
       </div>
     <div class= "catalog navbar">
       <ul class="nav nav-tabs">
-        <li role="presentation" class="active"><a href="#">All</a></li>
-        <li role="presentation"><a href="#">New</a></li>
-        <li role="presentation"><a href="#">Top Rated</a></li>
+        <li role="presentation" class="active"><a href="#"><%= t "views.filters.all" %></a></li>
+        <li role="presentation"><a href="#"><%= t "views.filters.new" %></a></li>
+        <li role="presentation"><a href="#"><%= t "views.filters.top_rated" %></a></li>
         <li role="presentation" class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-            Category <span class="caret"></span>
+            <%= t "views.filters.category" %> <span class="caret"></span>
           </a>
           <ul class="dropdown-menu">
           </ul>
         </li>
       <li role="presentation" class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-          Author <span class="caret"></span>
+          <%= t "views.filters.author" %> <span class="caret"></span>
         </a>
         <ul class="dropdown-menu">
         </ul>
       </li>
     <li role="presentation" class="dropdown">
       <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-        Size <span class="caret"></span>
+        <%= t "views.filters.size" %> <span class="caret"></span>
       </a>
       <ul class="dropdown-menu">
       </ul>
@@ -70,16 +70,16 @@
                 <div class="panel panel-default col-sm-3">
                     <img src="<%= image_path pattern.image.url(:medium) %>" alt="">
                     <div class="panel-body">
-                        <h3><%= pattern.title %></h3>
+                        <h3><%= pattern.title %></h3> <!-- create new migration for tittle_ru, title_en, do later -->
                         <% if session[:currency] == "RUB" %>
                           <p><%= number_to_currency(pattern.price_rub, :unit => '₽') %></p>
                         <% else %>
                           <p><%= number_to_currency(pattern.price_usd, :unit => '$') %></p>
                         <% end %>
 
-                          <%= link_to 'Show', pattern, :class => "btn btn-info" %> <%= link_to 'Add to Cart', create_pattern_cart_item_path(id: pattern.id), method: 'POST', :class => "btn btn-success" %>
+                          <%= link_to t("views.common.show"), pattern, :class => "btn btn-info" %> <%= link_to t("views.common.add_to_cart"), create_pattern_cart_item_path(id: pattern.id), method: 'POST', :class => "btn btn-success" %>
                             <% if current_user.admin? %>
-                              <%= link_to 'Edit', edit_pattern_path(pattern), :class => "btn btn-info" %> <%= link_to 'Delete', pattern, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger" %>
+                              <%= link_to t("views.common.edit"), edit_pattern_path(pattern), :class => "btn btn-info" %> <%= link_to t("views.common.destroy"), pattern, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger" %>
                             <% end %>
                   </div>
             </div>
@@ -90,7 +90,7 @@
 <hr>
   <% if current_user.admin? %>
     <div class="new-pattern">
-      <%= link_to 'New Pattern', new_pattern_path, :class => "btn btn-primary" %>
+      <%= link_to t("views.patterns.new"), new_pattern_path, :class => "btn btn-primary" %>
     </div>
   <% end %>
 </div>
