@@ -2,14 +2,25 @@
 
 <%= image_tag @pattern.image.url(:medium) %>
 
+<% if I18n.locale == :en %>
 <p>
   <strong>Title:</strong>
-  <%= @pattern.title %>
+  <%= @pattern.title_en %>
+</p>
+<% else %>
+<p>
+  <strong>Title:</strong>
+  <%= @pattern.title_ru %>
+</p>
+<% end %>
+<p>
+  <strong>Description:</strong>
+  <%= @pattern.description_en %>
 </p>
 
 <p>
   <strong>Description:</strong>
-  <%= @pattern.description %>
+  <%= @pattern.description_ru %>
 </p>
 
 <% if session[:currency] == "RUB" %>

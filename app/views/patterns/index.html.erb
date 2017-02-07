@@ -70,15 +70,18 @@
                 <div class="panel panel-default col-sm-3">
                     <img src="<%= image_path pattern.image.url(:medium) %>" alt="">
                     <div class="panel-body">
-                        <h3><%= pattern.title %></h3> <!-- create new migration for tittle_ru, title_en, do later -->
+                      <% if I18n.locale == :en %>
+                        <h3><%= pattern.title_en %></h3>
+                      <% else %>
+                        <h3><%= pattern.title_ru %></h3>
+                      <% end %>
                         <% if session[:currency] == "RUB" %>
                           <p><%= number_to_currency(pattern.price_rub, :unit => '₽') %></p>
                         <% else %>
                           <p><%= number_to_currency(pattern.price_usd, :unit => '$') %></p>
                         <% end %>
-
                           <%= link_to t("views.common.show"), pattern, :class => "btn btn-info" %> <%= link_to t("views.common.add_to_cart"), create_pattern_cart_item_path(id: pattern.id), method: 'POST', :class => "btn btn-success" %>
-                            <% if current_user.admin? %>
+                            <% if user_signed_in? && current_user.admin? %>
                               <%= link_to t("views.common.edit"), edit_pattern_path(pattern), :class => "btn btn-info" %> <%= link_to t("views.common.destroy"), pattern, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger" %>
                             <% end %>
                   </div>
@@ -88,7 +91,7 @@
         </div>
     </div>
 <hr>
-  <% if current_user.admin? %>
+  <% if user_signed_in? && current_user.admin? %>
     <div class="new-pattern">
       <%= link_to t("views.patterns.new"), new_pattern_path, :class => "btn btn-primary" %>
     </div>

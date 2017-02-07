@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170130132856) do
+ActiveRecord::Schema.define(version: 20170206162313) do
 
   create_table "accessories", force: :cascade do |t|
     t.string   "title"
@@ -69,8 +69,10 @@ ActiveRecord::Schema.define(version: 20170130132856) do
   end
 
   create_table "patterns", force: :cascade do |t|
-    t.string   "title"
-    t.text     "description"
+    t.string   "title_en"
+    t.string   "title_ru"
+    t.text     "description_en"
+    t.text     "description_ru"
     t.decimal  "price_usd"
     t.decimal  "price_rub"
     t.string   "designer"
