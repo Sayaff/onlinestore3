@@ -1,20 +1,33 @@
-<%= simple_form_for(@pattern) do |f| %>
-  <%= f.error_notification %>
+<%= simple_form_for(@pattern, html: { multipart: true }) do |f| %>
 
-  <div class="form-inputs">
-    <%= f.input :title_ru %>
-    <%= f.input :title_en %>
-    <%= f.input :description_ru %>
-    <%= f.input :description_en %>
-    <%= f.input :price_usd %>
-    <%= f.input :price_rub %>
+  <% if @pattern.errors.any? %>
+  <ul>
+    <% @pattern.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+  <% end %>
+
+    <%= f.input :title_ru, placeholder: 'Название (русский)' %>
+
+    <%= f.input :title_en, placeholder: 'Title (English)' %>
+
+    <%= f.input :description_ru, placeholder: 'Описание (русский)' %>
+
+    <%= f.input :description_en, placeholder: 'Description (English)' %>
+
+    <%= f.input :price_usd, placeholder: 'Price (USD)' %>
+
+    <%= f.input :price_rub, placeholder: 'Цена (рубли)' %>
+
     <%= f.input :designer %>
-    <%= f.input :size %>
-    <%= f.input :category %>
-    <%= f.input :image, as: :file %>
-  </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
+    <%= f.input :size %>
+
+    <%= f.input :category %>
+
+    <%= f.input :image, as: :file %>
+
+    <%= f.button :submit, :class => 'btn btn-primary' %>
+
 <% end %>

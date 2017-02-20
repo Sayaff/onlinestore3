@@ -91,7 +91,7 @@
         </div>
     </div>
 <hr>
-  <% if user_signed_in? && current_user.admin? %>
+  <% if user_signed_in? && current_user.admin? %> <!-- add option to make category -->
     <div class="new-pattern">
       <%= link_to t("views.patterns.new"), new_pattern_path, :class => "btn btn-primary" %>
     </div>

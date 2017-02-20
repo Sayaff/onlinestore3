@@ -4,7 +4,7 @@ class PatternsController < ApplicationController
   # GET /patterns
   # GET /patterns.json
   def index
-    @patterns = Pattern.all
+    @patterns = Pattern.all.order("created_at DESC")
   end
 
   # GET /patterns/1
