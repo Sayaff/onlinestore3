@@ -1,12 +1,19 @@
-<div class='col-md-6 col-md-offset-3'>
+<div id="edit_page" class="col-md-8 col-md-offset-2">
+  <div class="row">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h1>Edit Your Pin</h1>
+      </div>
+      <div class="panel-body">
+          <%= render 'form' %>
+          <%= link_to 'Show', @pattern %> |
+          <%= link_to 'Back', patterns_path %>
 
-  <h1>Editing Pattern</h1>
-
-  <%= image_tag @pattern.image.url(:medium) %>
-
-  <%= render 'form' %>
-
-  <%= link_to 'Show', @pattern %> |
-  <%= link_to 'Back', patterns_path %>
-
+        <div class="current_image">
+          <strong class="center">Current Image</strong>
+          <%= image_tag @pattern.image.url(:medium) %>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

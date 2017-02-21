@@ -66,7 +66,6 @@
                     </li>
                 </ul>
             </div>
-        </div>
     </nav>
     <!-- example below. beautify later-->
 <% if session[:currency] == "RUB" %>
@@ -75,13 +74,12 @@
 <p><strong><%= t "application.navbar.currency_usd" %></strong></p>
 <% end %>
 
-  <p class='notice'><%= notice %></p>
   <% flash.each do |name, msg| %>
     <%= content_tag :div, msg, class: "alert alert-info" %>
   <% end %>
   <!-- <p class='alert'><%= alert %></p> -->
 <br>
     <%= yield %>
-
+</div>
 </body>
 </html>
