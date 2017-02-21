@@ -21,7 +21,28 @@
 
 en:
   activerecord:
+    models:
+      cart_items:
+        pattern: "Pattern: "
+        thread: "Thread: "
+        fabric: "Fabric: "
+        kit: "Kit: "
+        accessory: "Accessory: "
+      pattern:
+        one: "Схема"
+        other: "Схемы"
+      accessory: "Accessory"
     attributes:
+      pattern:
+        title_en: "Title (English)"
+        title_ru: "Title (Russian)"
+        description_en: "Description (English)"
+        description_ru: "Description (Russian)"
+        price_usd: "Price (USD)"
+        price_rub: "Price (RUB)"
+        designer: "Designer"
+        size: "Size"
+        category: "Category"
       accessory:
         title: "Title:"
         price: "Price:"
@@ -86,10 +107,3 @@ en:
     accessories:
       new: "New Accessory"
       title: "Accessories"
-  models:
-    cart_items:
-      pattern: "Pattern: "
-      thread: "Thread: "
-      fabric: "Fabric: "
-      kit: "Kit: "
-      accessory: "Accessory: "

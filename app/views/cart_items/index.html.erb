@@ -12,11 +12,15 @@
     <% if cart_item.product.present? %>
           <li>
             <%= link_to cart_item.category %>
-            <%= link_to cart_item.product.title_en, cart_item.product %> <!-- make title_ru, do later -->
-            <% if session[:currency] == "RUB" %>
-            <p><%= number_to_currency(cart_item.product.price_rub, :unit => '₽') %></p>
+            <% if I18n.locale == :en %>
+              <%= link_to cart_item.product.title_en, cart_item.product %> <!-- make title_ru, do later -->
             <% else %>
-            <p><%= number_to_currency(cart_item.product.price_usd, :unit => '$') %></p>
+              <%= link_to cart_item.product.title_ru, cart_item.product %>
+            <% end %>
+            <% if session[:currency] == "RUB" %>
+              <p><%= number_to_currency(cart_item.product.price_rub, :unit => '₽') %></p>
+            <% else %>
+              <p><%= number_to_currency(cart_item.product.price_usd, :unit => '$') %></p>
             <% end %>
             <p><%= t "views.cart_items.quantity" %> <%= cart_item.quantity %></p> <!-- make an option to add quantity -->
           </li>

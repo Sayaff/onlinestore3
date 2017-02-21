@@ -1,6 +1,27 @@
 ru:
   activerecord:
+    models:
+      cart_items:
+        pattern: "Схема: "
+        thread: "Нитки: "
+        fabric: "Ткань: "
+        kit: "Набор: "
+        accessory: "Аксессуар: "
+      pattern:
+        one: "Схема"
+        other: "Схемы"
+      accessory: "Аксессуары"
     attributes:
+      pattern:
+        title_en: "Наименование (английский)"
+        title_ru: "Наименование (русский)"
+        description_en: "Описание (английский)"
+        description_ru: "Описание (русский)"
+        price_usd: "Цена (Доллары США)"
+        price_rub: "Цена (Рубли РФ)"
+        designer: "Дизайнер"
+        size: "Размер"
+        category: "Категория"
       accessory:
         title: "Наименование"
         price: "Цена"
@@ -65,10 +86,3 @@ ru:
     accessories:
       new: "Новый аксессуар"
       title: "Аксессуары"
-  models:
-    cart_items:
-      pattern: "Схема: "
-      thread: "Нитки: "
-      fabric: "Ткань: "
-      kit: "Набор: "
-      accessory: "Аксессуар: "
