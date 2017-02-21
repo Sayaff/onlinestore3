@@ -38,7 +38,7 @@ gem 'i18n'
 
 gem 'devise-i18n'
 
-gem 'masonry-rails', '~> 0.2.4'
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.1'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
