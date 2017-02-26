@@ -1,5 +1,6 @@
 class PatternsController < ApplicationController
   before_action :set_pattern, only: [:show, :edit, :update, :destroy]
+  respond_to :js
 
   # GET /patterns
   # GET /patterns.json
@@ -25,7 +26,7 @@ class PatternsController < ApplicationController
   # POST /patterns.json
   def create
     @pattern = Pattern.new(pattern_params)
-
+    
     respond_to do |format|
       if @pattern.save
         format.html { redirect_to @pattern, notice: 'Pattern was successfully created.' }

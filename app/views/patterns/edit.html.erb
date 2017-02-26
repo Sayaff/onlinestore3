@@ -2,7 +2,7 @@
   <div class="row">
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h1>Edit Your Pin</h1>
+        <h1><%= t "views.patterns.form_edit" %></h1>
       </div>
       <div class="panel-body">
           <%= render 'form' %>
@@ -10,7 +10,7 @@
           <%= link_to 'Back', patterns_path %>
 
         <div class="current_image">
-          <strong class="center">Current Image</strong>
+          <strong class="center"><%= t "views.common.current_image" %></strong>
           <%= image_tag @pattern.image.url(:medium) %>
         </div>
       </div>

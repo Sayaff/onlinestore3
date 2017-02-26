@@ -13,7 +13,7 @@
           <li>
             <%= link_to cart_item.category %>
             <% if I18n.locale == :en %>
-              <%= link_to cart_item.product.title_en, cart_item.product %> <!-- make title_ru, do later -->
+              <%= link_to cart_item.product.title_en, cart_item.product %> 
             <% else %>
               <%= link_to cart_item.product.title_ru, cart_item.product %>
             <% end %>

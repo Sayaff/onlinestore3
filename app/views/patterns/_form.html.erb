@@ -26,7 +26,7 @@
 
     <%= f.input :category %>
 
-    <%= f.input :image, as: :file %>
+    <%= f.input :image, as: :file, :input_html => {id: "pictureInput"} %>
 
     <%= f.button :submit, :class => 'btn btn-primary' %>
 

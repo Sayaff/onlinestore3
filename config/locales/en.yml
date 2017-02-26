@@ -20,6 +20,13 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  helpers:
+    submit:
+      create: "Create"
+      update: "Update"
+    pattern:
+      create: "Create Pattern"
+      update: "Update Pattern"
   activerecord:
     models:
       cart_items:
@@ -86,6 +93,7 @@ en:
       add_to_cart: "Add to Cart"
       description: "Description:"
       manufacturer: "Manufacturer:"
+      current_image: "Current image"
     filters:
       sort_by: "Sort by"
       all: "All"
@@ -97,6 +105,8 @@ en:
     patterns:
       header: "Patterns catalog"
       new: "New pattern"
+      form_new: "Create a new pattern"
+      form_edit: "Edit Your Pattern"
     cart_items:
       title: "Your Cart"
       empty: "Your cart is currently empty"

@@ -1,4 +1,11 @@
 ru:
+  helpers:
+    submit:
+      create: "Создать"
+      update: "Обновить"
+    pattern:
+      create: "Создать схему"
+      update: "Обновить схему"
   activerecord:
     models:
       cart_items:
@@ -65,6 +72,7 @@ ru:
       add_to_cart: "Добавить в корзину"
       description: "Описание:"
       manufacturer: "Производитель:"
+      current_image: "Текущее изображение"
     filters:
       sort_by: "Сортировать по:"
       new: "Новые"
@@ -76,6 +84,8 @@ ru:
     patterns:
       header: "Каталог схем"
       new: "Новая схема"
+      form_new: "Создайте новую схему"
+      form_edit: "Редактирование схемы"
     cart_items:
       title: "Моя корзина"
       empty: "Ваша корзина пуста"
