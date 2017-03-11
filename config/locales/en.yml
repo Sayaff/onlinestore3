@@ -50,6 +50,7 @@ en:
         designer: "Designer"
         size: "Size"
         category: "Category"
+        image: "Image"
       accessory:
         title: "Title:"
         price: "Price:"
@@ -94,6 +95,7 @@ en:
       description: "Description:"
       manufacturer: "Manufacturer:"
       current_image: "Current image"
+      back: "Back"
     filters:
       sort_by: "Sort by"
       all: "All"

@@ -1,52 +1,64 @@
-<%= image_tag @pattern.image.url(:medium) %>
+<div id="item_show" class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <div class="panel panel-default">
+      <div class="panel-heading item_image">
+        <%= image_tag @pattern.image.url%>
+      </div>
+      <div class="panel-body">
+        <% if I18n.locale == :en %>
+        <p>
+          <strong>Title:</strong>
+          <%= @pattern.title_en %>
+        </p>
+        <% else %>
+        <p>
+          <strong>Title:</strong>
+          <%= @pattern.title_ru %>
+        </p>
+        <% end %>
+        <p>
+          <strong>Description:</strong>
+          <%= @pattern.description_en %>
+        </p>
 
-<% if I18n.locale == :en %>
-<p>
-  <strong>Title:</strong>
-  <%= @pattern.title_en %>
-</p>
-<% else %>
-<p>
-  <strong>Title:</strong>
-  <%= @pattern.title_ru %>
-</p>
-<% end %>
-<p>
-  <strong>Description:</strong>
-  <%= @pattern.description_en %>
-</p>
+        <p>
+          <strong>Description:</strong>
+          <%= @pattern.description_ru %>
+        </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @pattern.description_ru %>
-</p>
+        <% if session[:currency] == "RUB" %>
+        <p>
+          <strong><%= t "views.common.price" %></strong>
+          <%= @pattern.price_rub %>
+        </p>
+        <% else %>
+        <p>
+          <strong><%= t "views.common.price" %></strong>
+          <%= @pattern.price_usd %>
+        </p>
+        <% end %>
 
-<% if session[:currency] == "RUB" %>
-<p>
-  <strong><%= t "views.common.price" %></strong>
-  <%= @pattern.price_rub %>
-</p>
-<% else %>
-<p>
-  <strong><%= t "views.common.price" %></strong>
-  <%= @pattern.price_usd %>
-</p>
-<% end %>
+        <p>
+          <strong>Designer:</strong>
+          <%= @pattern.designer %>
+        </p>
 
-<p>
-  <strong>Designer:</strong>
-  <%= @pattern.designer %>
-</p>
+        <p>
+          <strong>Size:</strong>
+          <%= @pattern.size %>
+        </p>
 
-<p>
-  <strong>Size:</strong>
-  <%= @pattern.size %>
-</p>
-
-<p>
-  <strong>Category:</strong>
-  <%= @pattern.category %>
-</p>
-
-<%= link_to 'Edit', edit_pattern_path(@pattern) %> |
-<%= link_to 'Back', patterns_path %>
+        <p>
+          <strong>Category:</strong>
+          <%= @pattern.category %>
+        </p>
+      </div>
+      <div class="panel-footer">
+        <div class="btn-group pull-right">
+          <%= link_to t("views.common.edit"), edit_pattern_path(@pattern) %> |
+          <%= link_to t("views.common.back"), patterns_path %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

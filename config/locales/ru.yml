@@ -29,6 +29,7 @@ ru:
         designer: "Дизайнер"
         size: "Размер"
         category: "Категория"
+        image: "Изображение"
       accessory:
         title: "Наименование"
         price: "Цена"
@@ -73,6 +74,7 @@ ru:
       description: "Описание:"
       manufacturer: "Производитель:"
       current_image: "Текущее изображение"
+      back: "Назад"
     filters:
       sort_by: "Сортировать по:"
       new: "Новые"
