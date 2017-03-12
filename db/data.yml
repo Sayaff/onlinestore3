@@ -1,0 +1,249 @@
+
+---
+cart_items:
+  columns:
+  - id
+  - user_id
+  - pattern_id
+  - strand_id
+  - fabric_id
+  - kit_id
+  - accessory_id
+  - quantity
+  - created_at
+  - updated_at
+  records: 
+  - - 3
+    - 1
+    - 1
+    - 
+    - 
+    - 
+    - 
+    - 1
+    - '2017-02-21 18:30:53.074110'
+    - '2017-02-21 18:30:53.074110'
+
+---
+patterns:
+  columns:
+  - id
+  - title_en
+  - title_ru
+  - description_en
+  - description_ru
+  - price_usd
+  - price_rub
+  - designer
+  - size
+  - category
+  - created_at
+  - updated_at
+  - image_file_name
+  - image_content_type
+  - image_file_size
+  - image_updated_at
+  records: 
+  - - 1
+    - Cherry Blossom
+    - Вишня
+    - Description
+    - Описание
+    - 10
+    - 590
+    - Designer 1
+    - 400x400
+    - Scenery
+    - '2017-02-06 16:24:33.619656'
+    - '2017-02-06 17:44:26.978865'
+    - 1eec446c1f15f1b163f9196d7e7de28a.jpg
+    - image/jpeg
+    - 11671
+    - '2017-02-06 17:44:26.929498'
+  - - 2
+    - Butterfly
+    - Бабочка
+    - Description
+    - Описание
+    - 12
+    - 700
+    - Designer 2
+    - 450x450
+    - Nature
+    - '2017-02-07 12:08:35.797300'
+    - '2017-02-07 12:08:35.797300'
+    - 097b0a21151b57a8a4283fe7ee2b6434.jpg
+    - image/jpeg
+    - 140612
+    - '2017-02-07 12:08:35.629262'
+  - - 3
+    - Flowers_triangle
+    - Цветы_1
+    - Description
+    - Описание
+    - 13
+    - 750
+    - Designer 3
+    - 300x300
+    - Flowers
+    - '2017-02-07 12:17:57.406067'
+    - '2017-02-07 12:17:57.406067'
+    - il_fullxfull.723544696_edjk.jpg
+    - image/jpeg
+    - 588257
+    - '2017-02-07 12:17:57.099835'
+  - - 4
+    - Flowers_branch
+    - Цветы_ветка
+    - Description
+    - Описание
+    - 8
+    - 500
+    - Designer 2
+    - 500x200
+    - Flowers
+    - '2017-02-07 12:20:01.213828'
+    - '2017-02-07 12:20:01.213828'
+    - Detail_M_03-618x935.jpg
+    - image/jpeg
+    - 162162
+    - '2017-02-07 12:20:01.065762'
+  - - 5
+    - Red_Flower
+    - Красный_цветок
+    - Description
+    - Описание
+    - 5
+    - 300
+    - Designer 2
+    - 200x200
+    - Flowers
+    - '2017-02-07 12:22:30.129209'
+    - '2017-02-07 12:22:30.129209'
+    - DSC099561.jpg
+    - image/jpeg
+    - 96457
+    - '2017-02-07 12:22:30.013115'
+  - - 6
+    - Flowers_2
+    - Цветы_2
+    - Description
+    - Описание
+    - 4
+    - 250
+    - Designer 3
+    - 400x400
+    - Flowers
+    - '2017-02-07 12:24:29.874246'
+    - '2017-02-07 12:24:29.874246'
+    - IMG_2615.jpg
+    - image/jpeg
+    - 27812
+    - '2017-02-07 12:24:29.810251'
+  - - 7
+    - Minions
+    - Миньоны
+    - From the cartoon
+    - Из мультика
+    - 11
+    - 600
+    - Designer 3
+    - 700x1000
+    - Cartoons
+    - '2017-02-21 11:51:05.742366'
+    - '2017-02-21 11:51:05.742366'
+    - e221ae552ad7869118854d8b0b91287b.jpg
+    - image/jpeg
+    - 249084
+    - '2017-02-21 11:51:05.470008'
+  - - 9
+    - Hello Kitty
+    - Hello Kitty
+    - Hello Kitty
+    - Hello Kitty
+    - 12
+    - 650
+    - Designer 3
+    - 500x350
+    - Cartoons
+    - '2017-02-21 12:05:06.075405'
+    - '2017-02-21 12:05:06.075405'
+    - Diamond-mosaic-font-b-pattern-b-font-needle-art-picture-rhinestones-christmas-decoration-set-for-cross.jpg
+    - image/jpeg
+    - 111968
+    - '2017-02-21 12:05:05.923706'
+  - - 10
+    - White tiger
+    - Белый тигр
+    - White tiger
+    - Белый тигр
+    - 18
+    - 1100
+    - Designer 2
+    - 600x900
+    - Nature
+    - '2017-02-21 12:07:48.454740'
+    - '2017-02-21 12:07:48.454740'
+    - a9fadbe3b41afcbda53025e349b12cdc.jpg
+    - image/png
+    - 70761
+    - '2017-02-21 12:07:48.227330'
+
+---
+users:
+  columns:
+  - id
+  - email
+  - encrypted_password
+  - reset_password_token
+  - reset_password_sent_at
+  - remember_created_at
+  - sign_in_count
+  - current_sign_in_at
+  - last_sign_in_at
+  - current_sign_in_ip
+  - last_sign_in_ip
+  - created_at
+  - updated_at
+  - first_name
+  - last_name
+  - about
+  - birthday
+  - admin
+  records: 
+  - - 1
+    - kir3217@gmail.com
+    - "$2a$11$zRcwFqaqOOL1Oglkwpyut.lCPRcENHCSOeg.hRVRw4oPimOShONlq"
+    - 
+    - 
+    - 
+    - 10
+    - '2017-02-24 15:04:29.024433'
+    - '2017-02-21 17:15:02.111400'
+    - 127.0.0.1
+    - 127.0.0.1
+    - '2017-02-06 15:47:24.164226'
+    - '2017-02-24 15:04:29.025586'
+    - Кирилл
+    - Шубин
+    - 
+    - '1987-06-14'
+    - true
+  - - 2
+    - shelen8@rambler.ru
+    - "$2a$11$xzjwaBzTUVbIrH1clOXMw.mmoi8It3FssgC.MQfTB8KPfRdVEQKkm"
+    - 
+    - 
+    - 
+    - 2
+    - '2017-02-07 21:03:05.443811'
+    - '2017-02-06 15:48:05.878701'
+    - 127.0.0.1
+    - 127.0.0.1
+    - '2017-02-06 15:48:05.864412'
+    - '2017-02-07 21:03:05.444417'
+    - Elena
+    - Shubina
+    - 
+    - '1965-05-04'
+    - false
