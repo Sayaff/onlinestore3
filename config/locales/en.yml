@@ -96,6 +96,7 @@ en:
       manufacturer: "Manufacturer:"
       current_image: "Current image"
       back: "Back"
+      in_stock: "In Stock"
     filters:
       sort_by: "Sort by"
       all: "All"

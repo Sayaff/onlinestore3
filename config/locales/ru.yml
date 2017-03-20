@@ -75,6 +75,7 @@ ru:
       manufacturer: "Производитель:"
       current_image: "Текущее изображение"
       back: "Назад"
+      in_stock: "В наличии"
     filters:
       sort_by: "Сортировать по:"
       new: "Новые"
