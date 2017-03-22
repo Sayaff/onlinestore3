@@ -83,8 +83,8 @@
                             <i class="fa fa-cart-plus fa-2x" aria-hidden="true"></i> <%= t("views.common.add_to_cart") %>
                           <% end %>
                             <% if user_signed_in? && current_user.admin? %>
-                                <%= link_to t("views.common.edit"), edit_pattern_path(pattern), :class => "btn btn-info" %>
-                                <%= link_to t("views.common.destroy"), pattern, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger" %>
+                                <%= link_to t("views.common.edit"), edit_pattern_path(pattern), :class => "btn btn-info outline" %>
+                                <%= link_to t("views.common.destroy"), pattern, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger outline" %>
                             <% end %>
                 </div>
               </div>

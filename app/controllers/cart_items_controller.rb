@@ -1,6 +1,6 @@
 class CartItemsController < ApplicationController
   before_action :authenticate_user!
-  
+
   def index
     @cart_items = current_user.cart_items
   end
@@ -14,7 +14,7 @@ class CartItemsController < ApplicationController
       current_user.cart_items.create(pattern_id: pattern.id, quantity: 1)
   end
 
-  redirect_to action: :index
+  redirect_to :back
 end
 
 def create_strand
@@ -79,5 +79,4 @@ end
     end
     redirect_to action: :index
   end
-
-  end
+end
