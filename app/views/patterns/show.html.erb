@@ -1,9 +1,11 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6">
-      <img src="<%= image_path @pattern.image.url %>" alt="">
+      <img src="<%= image_path @pattern.image.url %>" alt="" class="img-responsive">
         <div class="text-center top-10">
-          <%= link_to "View in gallery", @pattern.image.url, :class => "img-responsive image_element" %>
+          <%= link_to @pattern.image.url, :class => "image_element" do %>
+            <i class="fa fa-plus-circle fa2x" aria-hidden="true"></i> <%= t("views.common.magnify") %>
+          <% end %>
         </div>
     </div>
 
@@ -120,7 +122,6 @@
       <div class="btn-group pull-right">
         <%= link_to t("views.common.edit"), edit_pattern_path(@pattern) %> |
         <%= link_to t("views.common.back"), patterns_path %>
-        <%= link_to "Show mah Fancybox!", "#hello", class: "fancybox" %>
       </div>
     </div>
   </div>

@@ -19,7 +19,12 @@
  @import "bootstrap";
  @import "bootstrap/theme";
  @import "font-awesome";
-
+a:visited {
+  color: #337ab7;
+}
+a:hover {
+  background-color: transparent;
+}
 .top-10 {
   margin-top: 10px;
 }

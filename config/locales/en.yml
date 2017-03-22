@@ -97,6 +97,7 @@ en:
       current_image: "Current image"
       back: "Back"
       in_stock: "In Stock"
+      magnify: "Show in bigger size"
     filters:
       sort_by: "Sort by"
       all: "All"
