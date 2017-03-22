@@ -1,7 +1,10 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6">
-      <img src="<%= image_path @pattern.image.url %>" alt="" class="img-responsive">
+      <img src="<%= image_path @pattern.image.url %>" alt="">
+        <div class="text-center top-10">
+          <%= link_to "View in gallery", @pattern.image.url, :class => "img-responsive image_element" %>
+        </div>
     </div>
 
       <div class="col-md-6">
@@ -114,11 +117,10 @@
         </div>
       </div>
     </div>
-      <div class="panel-footer">
-        <div class="btn-group pull-right">
-          <%= link_to t("views.common.edit"), edit_pattern_path(@pattern) %> |
-          <%= link_to t("views.common.back"), patterns_path %>
-        </div>
+      <div class="btn-group pull-right">
+        <%= link_to t("views.common.edit"), edit_pattern_path(@pattern) %> |
+        <%= link_to t("views.common.back"), patterns_path %>
+        <%= link_to "Show mah Fancybox!", "#hello", class: "fancybox" %>
       </div>
     </div>
   </div>
