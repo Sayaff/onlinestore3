@@ -64,8 +64,8 @@ ru:
       catalog_button: "Каталог"
   views:
     common:
-      title: "Наименование:"
-      price: "Цена:"
+      title: "Наименование"
+      price: "Цена"
       edit: "Редактировать"
       back: "Назад"
       show: "Подробнее"
@@ -92,11 +92,11 @@ ru:
       form_edit: "Редактирование схемы"
     cart_items:
       title: "Моя корзина"
-      empty: "Ваша корзина пуста"
+      empty: "Корзина пуста"
       clear: "Очистить корзину"
       delete: "Удалить товар"
       total: "Итого:"
-      quantity: "Количество:"
+      quantity: "Количество"
     accessories:
       new: "Новый аксессуар"
       title: "Аксессуары"

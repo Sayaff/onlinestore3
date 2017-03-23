@@ -8,13 +8,15 @@ Rails.application.routes.draw do
 
   resources :users
 
-  resources :cart_items, only: [:index, :create, :destroy] do
+  resources :cart_items do
     member do
         post 'create_pattern'
         post 'create_strand'
         post 'create_fabric'
         post 'create_kit'
         post 'create_accessory'
+        get 'quantity_increase'
+        delete 'quantity_decrease'
     end
     collection do
         get 'clear_cart'

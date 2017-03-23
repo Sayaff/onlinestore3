@@ -30,11 +30,11 @@ en:
   activerecord:
     models:
       cart_items:
-        pattern: "Pattern: "
-        thread: "Thread: "
-        fabric: "Fabric: "
-        kit: "Kit: "
-        accessory: "Accessory: "
+        pattern: "Pattern "
+        thread: "Thread "
+        fabric: "Fabric "
+        kit: "Kit "
+        accessory: "Accessory "
       pattern:
         one: "Схема"
         other: "Схемы"
@@ -85,8 +85,8 @@ en:
       catalog_button: "Catalog"
   views:
     common:
-      title: "Title:"
-      price: "Price:"
+      title: "Title"
+      price: "Price"
       edit: "Edit"
       back: "Back"
       show: "Show"
@@ -112,12 +112,12 @@ en:
       form_new: "Create a new pattern"
       form_edit: "Edit Your Pattern"
     cart_items:
-      title: "Your Cart"
-      empty: "Your cart is currently empty"
+      title: "My Cart"
+      empty: "The cart is currently empty"
       clear: "Clear your cart"
       delete: "Delete item"
       total: "Total:"
-      quantity: "Quantity:"
+      quantity: "Quantity"
     accessories:
       new: "New Accessory"
       title: "Accessories"
