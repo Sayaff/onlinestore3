@@ -1,5 +1,6 @@
 class CartItemsController < ApplicationController
   before_action :authenticate_user!
+  respond_to :html, :js
 
   def index
     @cart_items = current_user.cart_items
