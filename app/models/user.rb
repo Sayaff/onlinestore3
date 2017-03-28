@@ -6,5 +6,6 @@ class User < ActiveRecord::Base
 
   has_many :cart_items
 
-  validates_presence_of :email, :first_name, :last_name, :birthday
+  validates :email, :first_name, :last_name, :birthday, presence: true
+  validates :email, uniqueness: true
 end
