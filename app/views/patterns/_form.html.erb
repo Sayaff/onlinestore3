@@ -1,12 +1,6 @@
 <%= simple_form_for(@pattern, html: { multipart: true }) do |f| %>
 
-  <% if @pattern.errors.any? %>
-  <ul>
-    <% @pattern.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>
-  </ul>
-  <% end %>
+    <%= errors_for(@pattern) %>
 
     <%= f.input :title_ru, placeholder: 'Название (русский)' %>
 
